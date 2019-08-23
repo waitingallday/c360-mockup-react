@@ -1,0 +1,120 @@
+:root {
+  --heading-bg: 119, 130, 133;
+  --accordion-bg: 0, 165, 216;
+  --border: 205, 209, 210;
+  --link: 29, 199, 232;
+}
+
+.App {
+  font-family: sans-serif;
+  font-size: 13px;
+  text-align: center;
+}
+
+form {
+  text-align: right;
+  width: 100%;
+}
+
+.search__type,
+.search__keyword,
+.search__button {
+  border: 1px solid rgb(var(--border));
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.search__label {
+  font-size: 0.825rem;
+  vertical-align: middle;
+}
+
+.search__type {
+  background-color: white;
+  border-radius: 3px;
+  height: 2rem;
+  width: 15%;
+}
+
+.search__keyword {
+  border-right: 0;
+  border-radius: 3px 0 0 3px;
+  width: 50%;
+}
+
+.search__keyword::placeholder {
+  color: rgb(var(--border));
+}
+
+.search__button {
+  background-color: rgb(var(--link));
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox%3D'0 0 20 20' xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath d%3D'M7.677 13.671c3.26.015 5.974-2.66 5.992-5.903.018-3.37-2.631-6.06-5.977-6.072C4.428 1.684 1.714 4.357 1.7 7.599c-.014 3.372 2.628 6.057 5.976 6.072m6.01-1.181c.266.266.526.529.791.787.03.03.092.042.137.039.475-.035.875.116 1.212.455 1.237 1.243 2.48 2.481 3.718 3.724.592.595.606 1.453.042 2.065-.52.565-1.5.591-2.044.048-1.263-1.26-2.523-2.526-3.785-3.788a1.472 1.472 0 0 1-.449-1.216c.003-.04-.009-.095-.035-.122-.258-.265-.52-.526-.786-.792-1.857 1.426-3.937 1.96-6.229 1.541-1.965-.358-3.548-1.374-4.746-2.972-2.32-3.092-1.932-7.482.888-10.158C5.236-.59 9.676-.714 12.67 1.832c3.061 2.604 3.671 7.34 1.015 10.658' fill%3D'%23fff' fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E\a");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  border-radius: 0 3px 3px 0;
+  color: white;
+  margin-left: 0;
+  text-indent: -999rem;
+  width: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+th,
+td {
+  font-weight: 300;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: rgb(var(--heading-bg));
+  border-left: 3px solid white;
+  color: white;
+  padding: 0.75rem 0.75rem 2rem;
+  white-space: nowrap;
+}
+
+td {
+  border-bottom: 1px solid rgb(var(--border));
+  border-top: 1px solid rgb(var(--border));
+  padding: 0.5rem 0.75rem;
+}
+
+.util {
+  border-left: 0;
+}
+
+.field--id {
+  color: rgb(var(--link));
+  font-weight: bold;
+}
+
+.accordion {
+  background: rgb(var(--accordion-bg));
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.accordion::after {
+  content: "";
+  display: block;
+  border-left: 0.25rem solid transparent;
+  border-right: 0.25rem solid transparent;
+  border-top: 0.333rem solid white;
+  height: 0;
+  margin-left: 0.1875rem;
+  margin-top: 0.333rem;
+  width: 0;
+}
