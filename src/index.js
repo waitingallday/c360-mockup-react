@@ -1,46 +1,47 @@
-import React from "react";
-import ReactDOM from "react-dom";
-// import axios from "axios";
+import React from "react"
+import ReactDOM from "react-dom"
+import Axios from "axios"
 
-import "./styles.css";
-import data from "./data.json";
+import "./styles.css"
+
+const API_ENDPOINT = "https://waitingallday.com/c-360/data.json"
 
 class App extends React.Component {
-  state = { items: data.results };
+  state = { fields: [], items: [] }
 
   render() {
-    const items = this.state.items;
+    const { items, fields } = this.state;
 
     return (
       <div className="App">
         <form>
-          <label class="search__label">Search type:</label>
-          <select class="search__type">
+          <label className="search__label">Search type:</label>
+          <select className="search__type">
             <option>Name</option>
             <option>Email</option>
           </select>
           <input
-            class="search__keyword"
+            className="search__keyword"
             placeholder="Start typing"
             type="text"
             name="search"
           />
-          <input class="search__button" type="submit" value="Search" />
+          <input className="search__button" type="submit" value="Search" />
         </form>
         <table>
           <thead>
             <tr>
-              {Object.values(data.fieldLabels).map(label => (
-                <th>{label}</th>
+              {Object.values(fields).map(label => (
+                <th key={label}>{label}</th>
               ))}
               <th className="util" />
             </tr>
           </thead>
           <tbody>
-            {items.map(item => (
-              <tr>
-                {Object.keys(data.fieldLabels).map(key => (
-                  <td className={"field--" + key}>{item[key]}</td>
+            {items.map((item, i) => (
+              <tr key={i}>
+                {Object.keys(fields).map(key => (
+                  <td key={`${i}-${key}`} className={"field--" + key}>{item[key]}</td>
                 ))}
                 <td className="util">
                   <span className="accordion" />
@@ -51,6 +52,18 @@ class App extends React.Component {
         </table>
       </div>
     );
+  }
+
+  async componentDidMount() {
+    try {
+      let res = await Axios.get(API_ENDPOINT)
+      const items = res.data.results
+      const fields = res.data.fieldLabels
+      this.setState({ items, fields })
+
+    } catch (e) {
+      console.log(`${e}`)
+    }
   }
 }
 
