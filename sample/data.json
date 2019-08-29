@@ -6,6 +6,15 @@
     "address": "Address",
     "email": "Email"
   },
+  "detailLabels": {
+    "pref_name": "Preferred Name",
+    "gender": "Gender",
+    "mobile_no": "Mobile Number",
+    "home_no": "Home Number",
+    "hm_id": "Health Manager ID",
+    "mc_id": "Maternal &amp; Child ID",
+    "k_id": "Kindergarten ID"
+  },
   "results": [
     {
       "id": 511033,
@@ -33,7 +42,14 @@
       "name": "Katherine Smith",
       "dob": "16-06-1998",
       "address": "21 Lachlan Drive Endeavour Hills",
-      "email": "-"
-    }
+      "email": "-",
+      "pref_name": "Kat",
+      "gender": "F",
+      "mobile_no": "0419 123 456",
+      "home_no": "8790 6783",
+      "hm_id": "1000206",
+      "mc_id": "1000207",
+      "k_id": "100021"
+      }
   ]
 }

@@ -1,6 +1,7 @@
 :root {
   --heading-bg: 119, 130, 133;
   --accordion-bg: 0, 165, 216;
+  --details-bg: 240, 240, 240;
   --border: 205, 209, 210;
   --link: 29, 199, 232;
 }
@@ -100,6 +101,7 @@ td {
 
 .accordion {
   background: rgb(var(--accordion-bg));
+  border: .125rem solid white;
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
@@ -117,4 +119,38 @@ td {
   margin-left: 0.1875rem;
   margin-top: 0.333rem;
   width: 0;
+}
+
+.accordion.open::after {
+  border-bottom: 0.333rem solid white;
+  border-top: 0;
+  margin-top: .25rem;
+}
+
+.block--alt {
+  background-color: rgb(var(--details-bg));
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+.block__defs {
+  margin: .5rem 0;
+}
+
+.block__defs dt,
+.block__defs dd {
+  display: inline;
+  margin: 0 .5rem 0 0;
+}
+
+.block__defs dt {
+  font-weight: bold;
+}
+
+.block__defs dt::after {
+  content: ':';
 }
