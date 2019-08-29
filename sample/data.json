@@ -8,12 +8,12 @@
   },
   "detailLabels": {
     "pref_name": "Preferred Name",
-    "gender": "Gender",
-    "mobile_no": "Mobile Number",
-    "home_no": "Home Number",
     "hm_id": "Health Manager ID",
-    "mc_id": "Maternal &amp; Child ID",
-    "k_id": "Kindergarten ID"
+    "gender": "Gender",
+    "mc_id": "Maternal & Child ID",
+    "mobile_no": "Mobile Number",
+    "k_id": "Kindergarten ID",
+    "home_no": "Home Number"
   },
   "results": [
     {
