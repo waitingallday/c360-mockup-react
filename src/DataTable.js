@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import LOCALDATA from "../sample/data.json"
+import DATADICTIONARY from "./defs.json"
 
 class DataTable extends Component {
   state = ({ visible: [] })
@@ -18,8 +18,8 @@ class DataTable extends Component {
   }
 
   render() {
-    const fields = LOCALDATA.fieldLabels
-    const details = LOCALDATA.detailLabels
+    const fields = DATADICTIONARY.fields
+    const details = DATADICTIONARY.details
 
     const { items } = this.props
     const { visible } = this.state

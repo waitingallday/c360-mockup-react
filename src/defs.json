@@ -1,0 +1,18 @@
+{
+  "fields": {
+    "id": "Name ID",
+    "name": "Name",
+    "dob": "DOB",
+    "address": "Address",
+    "email": "Email"
+  },
+  "details": {
+    "pref_name": "Preferred Name",
+    "hm_id": "Health Manager ID",
+    "gender": "Gender",
+    "mc_id": "Maternal & Child ID",
+    "mobile_no": "Mobile Number",
+    "k_id": "Kindergarten ID",
+    "home_no": "Home Number"
+  }
+}

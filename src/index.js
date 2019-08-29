@@ -8,7 +8,7 @@ import LOCALDATA from "../sample/data.json"
 
 import "./styles.css"
 
-const API_ENDPOINT = "" //"https://waitingallday.com/c-360/data.json"
+const API_ENDPOINT = "https://s3.amazonaws.com/waitingallday.com/c-360/data.json"
 
 class App extends Component {
   state = { items: [] }

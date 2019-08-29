@@ -1,20 +1,4 @@
 {
-  "fieldLabels": {
-    "id": "Name ID",
-    "name": "Name",
-    "dob": "DOB",
-    "address": "Address",
-    "email": "Email"
-  },
-  "detailLabels": {
-    "pref_name": "Preferred Name",
-    "hm_id": "Health Manager ID",
-    "gender": "Gender",
-    "mc_id": "Maternal & Child ID",
-    "mobile_no": "Mobile Number",
-    "k_id": "Kindergarten ID",
-    "home_no": "Home Number"
-  },
   "results": [
     {
       "id": 511033,
