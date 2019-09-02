@@ -4,7 +4,7 @@ import Axios from "axios"
 
 import DataTable from "./DataTable"
 import SearchForm from "./SearchForm"
-import LOCALDATA from "../sample/data.json"
+import LOCALDATA from "./sample/data.json"
 
 import "./styles.css"
 
